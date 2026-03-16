@@ -18,7 +18,7 @@ module my_nft::my_nft {
         url: Url,
     }
 
-    // Create a new NFT and send it to caller
+    // Create  NFT and send it to caller
     public fun mint(
         name: vector<u8>,
         description: vector<u8>,
@@ -35,7 +35,7 @@ module my_nft::my_nft {
         
         transfer::public_transfer(nft, sender);  }
 
-    // Transfer NFT to someone else
+    // Transfer NFT to someone
     public fun transfer(nft: NFT, recipient: address) {
         transfer::public_transfer(nft, recipient);
     }
